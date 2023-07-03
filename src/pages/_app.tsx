@@ -8,11 +8,17 @@ import Header from "@/components/Header";
 import Layout from "@/components/Layout";
 
 const ColorModeContext = React.createContext({
-  toggleColorMode: () => {},
+  toggleColorMode: () => { },
 });
 
-const App = ({ Component, pageProps: { session, ...pageProps } }) => {
-  const [mode, setMode] = React.useState<"light" | "dark">("light");
+const App = ({ Component, pageProps: { session, ...pageProps } }: {
+  Component: any;
+  pageProps: {
+    [x: string]: any;
+    session: any;
+  };
+}) => {
+  const [mode, setMode] = React.useState<"light" | "dark">("dark");
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {
