@@ -18,7 +18,7 @@ const App = ({ Component, pageProps: { session, ...pageProps } }: {
     session: any;
   };
 }) => {
-  const [mode, setMode] = React.useState<"light" | "dark">("dark");
+  const [mode, setMode] = React.useState<"light" | "dark">("light");
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {
