@@ -32,59 +32,7 @@ export const barData = {
   },
   ]
 };
-//bar Options
-export const barOption = {
-  //Tooltip when we hover on chart on the basic of dataset index
-  tooltips: {
-    mode: 'index',
-    callbacks: {
-      label: function (toolTipItem: { value: string; }) {
-        return ("Revenue: $" + toolTipItem.value)
-      }
-    }
 
-  },
-  scales: {
-    //xAxes for bar chart
-    xAxes: [
-      {
-        gridLines: {
-          color: 'cyan'
-        },
-        //describe the labels and there styles
-        scaleLabel: {
-          labelString: 'Months',
-          display: true,
-          fontColor: 'blue',
-          fontSize: 20
-        },
-        // stck colors
-        ticks: {
-          fontColor: 'green'
-        }
-      }
-    ],
-    //describes the line style
-    yAxes: [
-      {
-        gridLines: {
-          color: 'cyan'
-        },
-        scaleLabel: {
-          labelString: 'Revenue',
-          display: true,
-          fontColor: 'blue',
-          fontSize: 20,
-        },
-        //we can decide limit of stcks, color of stick and position of stick 
-        ticks: {
-          beginAtZero: false,
-          fontColor: 'green',
-        }
-      }
-    ]
-  }
-};
 
 //pieChart dataset
 export const pieChartData = {
